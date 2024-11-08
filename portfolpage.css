@@ -19,8 +19,9 @@ font-family:tahoma, sans-serif;
   background-color: var(--background-color) ;
 }
 header {
+  box-sizing: border-box;
   position: fixed;
-  width: 103vw;
+  width: 100vw;
   height: 70px;
   background-color: var(--navbar-color);
   z-index: 1;
