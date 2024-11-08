@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Specifications</title>
+    <style> 
+        body {
+           font-family: Arial, sans-serif;
+           margin: 0;
+           padding: 0;
+           background-color: #f5f5f5;
+       }
+    
+       .car-info {
+           width: 90%;
+           max-width: 1200px;
+           margin: 2rem auto;
+           background-color: #fff;
+           padding: 2rem;
+           border-radius: 8px;
+           box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+       }
+    
+       #car-model {
+           text-align: center;
+           font-size: 2rem;
+           margin-bottom: 1.5rem;
+       }
+    
+       .car-details {
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: center;
+           align-items: center;
+           margin-bottom: 2rem;
+       }
+    
+       .car-photo {
+           flex: 1 1 40%;
+           text-align: center;
+           position: relative;
+       }
+    
+       .car-photo img {
+           width: 100%;
+           max-width: 600px;
+           height: auto;
+           border-radius: 8px;
+       }
+    
+       .car-specs {
+           flex: 1 1 50%;
+           text-align: left;
+           padding-left: 2rem;
+       }
+    
+       .car-specs h2 {
+           font-size: 1.5rem;
+           margin-bottom: 1rem;
+       }
+    
+       .car-specs ul {
+           list-style-type: none;
+           padding: 0;
+       }
+    
+       .car-specs li {
+           font-size: 1.1rem;
+           margin: 0.5rem 0;
+           background: #f0f0f0;
+           padding: 0.5rem 1rem;
+           border-radius: 4px;
+       }
+    
+       .car-specs #rent-now {
+           display: inline-block;
+           padding: 0.75rem 1.5rem;
+           font-size: 1.1rem;
+           color: #fff;
+           background-color: #007bff;
+           border: none;
+           border-radius: 4px;
+           cursor: pointer;
+           text-align: center;
+           margin-top: 1.5rem;
+           text-decoration: none;
+           margin-left: 10px;
+       }
+       .price-span{
+           margin-left: 20px;
+       }
+       .productButton:hover {
+          transform: scale(1.1);
+          transition: 0.5s;
+       }
+    
+       .car-info-text {
+           margin-top: 2rem;
+           padding-top: 1rem;
+           border-top: 2px solid #f0f0f0;
+       }
+    
+       .car-info-text h2 {
+           font-size: 1.5rem;
+           margin-bottom: 1rem;
+       }
+    
+       .car-info-text p {
+           font-size: 1.1rem;
+           line-height: 1.6;
+           margin-bottom: 1rem;
+       }
+    
+       .slider {
+           position: relative;
+           width: 100%;
+           max-width: 600px;
+           margin: 0 auto;
+           overflow: hidden;
+           border-radius: 8px;
+       }
+    
+       .slides {
+           display: flex;
+           transition: transform 0.5s ease-in-out;
+       }
+    
+       .slide {
+           min-width: 100%;
+           box-sizing: border-box;
+       }
+    
+       .prev, .next {
+           position: absolute;
+           top: 50%;
+           transform: translateY(-50%);
+           background-color: rgba(0, 0, 0, 0.5);
+           color: white;
+           border: none;
+           padding: 1rem;
+           cursor: pointer;
+           border-radius: 50%;
+       }
+    
+       .prev {
+           left: 10px;
+       }
+    
+       .next {
+           right: 10px;
+       }
+    
+       .paymentForm{
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    margin-top: 10vh;
+    margin-left: calc(100vw/3);
+    justify-content: center;
+    align-items: center;
+    z-index: 1;
+}
+.payment {
+    width: 450px;
+    height: 520px;
+    background-color: white;
+    position: relative;
+    margin-top:10px;
+    padding: 10px 50px;
+    display: none;
+    flex-direction: column;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    
+}
+
+.payTitle {
+    margin: 10px 0;
+    font-size: 20px;
+    color: rgb(56, 56, 56);
+}
+
+label {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.payInput {
+    padding: 10px;
+    margin: 10px 0px;
+    border: none;
+    border-bottom: 1px solid gray;
+}
+
+.payInput::placeholder {
+    color: rgb(163, 163, 163);
+}
+.cardIcons {
+    display: flex;
+}
+
+.cardIcon {
+    margin-right: 10px;
+}
+
+.cardInfo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sm {
+    width: 30%;
+}
+
+.payButton {
+    height: 40px;
+    bottom: -40px;
+    width: 100%;
+    left: 0;
+    -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+    background-color: #259052;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    background-color: gray;
+    color: white;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    padding: 2px;
+}
+    
+          /* Responsive styles */
+       @media (max-width: 1080px){
+       .paymentForm{
+           position: fixed;
+           display: flex;
+           width: 25%;
+           z-index: 1; 
+       }
+       .payment {
+           width: 50vw;
+           background-color: white;
+           position: relative;
+           margin-top: 50px;
+           padding: 10px 50px;
+           display: none;
+           flex-direction: column;
+           -webkit-box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);
+           box-shadow: 0px 0px 13px 2px rgba(0, 0, 0, 0.3);  
+       }
+    }
+       @media (max-width: 768px) {
+           .car-details {
+               flex-direction: column;
+           }
+           .car-photo,
+           .car-specs {
+               flex: 1 1 100%;
+               padding: 0;
+               text-align: center;
+           }
+           .car-specs {
+               padding-left: 0;
+           }
+           .payment{
+            margin-top: -30px;
+           }
+       }
+       @media (max-width:580px) {
+        .payment{
+            min-height:82vh;
+           }
+       }
+       @media (max-width:400px) {
+        .car-details{
+            max-width:80vw ;
+        }
+        .payment{
+        min-height: 88vh;
+    }
+       }
+    </style>
+</head>
+<body>
+    <div class="car-info" id="car-info">
+        <h1 id="car-model"></h1>
+        <div class="car-details">
+            <div class="car-photo">
+                <div class="slider">
+                    <div class="slides" id="car-images"></div>
+                    <button class="prev" onclick="prevSlide()">&#10094;</button>
+                    <button class="next" onclick="nextSlide()">&#10095;</button>
+                </div>
+            </div>
+            <div class="car-specs">
+                <h2>მახასიათებლები:</h2>
+                <ul id="car-specs"></ul>
+                <span class="price-span" id="car-price"></span>
+                <button id="rent-now" class="productButton">დაქირავება</button>
+            </div>
+            <div class="paymentForm">          
+                    <form action="card.php" method="post">
+                        <div class="payment">
+                            <h6 class="payTitle">პერსონალური ინფორმაცია</h6>
+        <label>სახელი და გვარი</label>
+        <input type="text" placeholder="სახელი გვარი" name="name" class="payInput">
+        <label>ტელეფონის ნომერი</label>
+        <input type="text" placeholder="+995-5xx-xx-xx-xx" name="number" class="payInput">
+        <h6 class="payTitle">დაქირავების ხანგრძლივობა</h6>
+        <div>
+        <input type="date" class="payInput" name="start"   value="2025-01-22" min="2025-01-01" max="2026-12-31" /> <span>დან</span>
+        <input type="date" class="payInput" name="end"  value="2025-01-22" min="2025-01-01" max="2026-12-31" />  <span>მდე</span>
+        </div>
+        <h6 class="payTitle">ბარათის ინფორმაცია</h6>
+        <div class="cardIcons">
+            <img src="./img/visa.png" width="40" alt="" class="cardIcon">
+            <img src="./img/master.png" alt="" width="40" class="cardIcon">
+        </div>
+        <input type="text" class="payInput" name="cardnumber" placeholder="ბარათის ნომერი">
+        <div class="cardInfo">
+            <input type="text" placeholder="mm"  name="cardmonth" class="payInput sm">
+            <input type="text" placeholder="yyyy" name="cardyear" class="payInput sm">
+            <input type="text" placeholder="cvv" name="cardcvv" class="payInput sm">
+        </div>
+        <button class="payButton">შეამოწმეთ და გაგზავნეთ!</button>
+        <span class="close">X</span>
+                        </div>
+                    </form>
+                        </div> 
+
+        </div>
+        <div class="car-info-text">
+            <h2>დამატებითი ინფორმაცია</h2>
+            <p id="car-description"></p>
+        </div>
+    </div>
+
+    <script>
+        let cars = [];
+        let currentSlide = 0;
+
+        async function fetchCars() {
+            const response = await fetch('cars.json');
+            const data = await response.json();
+            cars = data.cars;
+        }
+
+        function getCarIndexFromUrl() {
+            const urlParams = new URLSearchParams(window.location.search);
+            return parseInt(urlParams.get('car'), 10);
+        }
+
+        function loadCarSpecs(index) {
+            if (index < 0 || index >= cars.length) return;
+
+            const car = cars[index];
+            document.getElementById('car-model').textContent = car.model;
+            document.getElementById('car-description').textContent = car.description;
+            document.getElementById('car-price').textContent = car.price;
+
+            const specs = car.specs;
+            const specsList = document.getElementById('car-specs');
+            specsList.innerHTML = '';
+            for (let key in specs) {
+                const listItem = document.createElement('li');
+                listItem.textContent = `${key}: ${specs[key]}`;
+                specsList.appendChild(listItem);
+            }
+
+            const images = car.images;
+            const imagesContainer = document.getElementById('car-images');
+            imagesContainer.innerHTML = '';
+            images.forEach((img, idx) => {
+                const imgElement = document.createElement('img');
+                imgElement.src = img;
+                imgElement.classList.add('slide');
+                imgElement.style.display = idx === 0 ? 'block' : 'none';
+                imagesContainer.appendChild(imgElement);
+            });
+
+            currentSlide = 0;
+        }
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.slide');
+            if (index >= slides.length) {
+                currentSlide = 0;
+            } else if (index < 0) {
+                currentSlide = slides.length - 1;
+            } else {
+                currentSlide = index;
+            }
+            slides.forEach((slide, idx) => {
+                slide.style.display = idx === currentSlide ? 'block' : 'none';
+            });
+        }
+
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+
+        function prevSlide() {
+            showSlide(currentSlide - 1);
+        }
+
+        document.addEventListener('DOMContentLoaded', async () => {
+            await fetchCars();
+            const carIndex = getCarIndexFromUrl();
+            loadCarSpecs(carIndex);
+        });
+
+        
+        const productButton = document.querySelectorAll(".productButton");
+                    const payment = document.querySelector(".payment");
+                    const close = document.querySelector(".close");
+                    
+                    // Add click event listeners to each productbutton
+                    productButton.forEach(button => {
+                        button.addEventListener("click", (e) => {
+                            e.preventDefault(); // Prevent default action of anchor tag
+                            // Get the index from the data-index attribute of the button
+                            const index = button.getAttribute("data-index");
+                            
+                            payment.style.display = "flex";
+                        });
+                    });
+                    close.addEventListener("click", () => {
+                    payment.style.display = "none";
+                    });
+    </script>
+</body>
+</html>

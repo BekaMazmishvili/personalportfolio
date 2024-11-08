@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> blog</title>
+    <style>
+          body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #d6d6d6;
+        }
+
+        header {
+            background-color: #34495e;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+
+        main {
+            padding: 2rem;
+            text-align: center;
+        }
+
+        #blog-post {
+            max-width: 800px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 1rem;
+            position: relative;
+        }
+
+        #post-image {
+            width: 100%;
+            height: auto;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        #post-date {
+            display: block;
+            margin-top: 10px;
+            font-size: 1rem;
+            color: #555;
+        }
+
+        #post-title {
+            font-size: 2rem;
+            margin-top: 1rem;
+            color: #333;
+        }
+
+        #post-description {
+            font-size: 1.2rem;
+            margin-top: 1rem;
+            line-height: 1.6;
+            width: 80vw;
+            max-width: 700px;
+            text-align: left;
+            margin-left: auto;
+            margin-right: auto;
+            color: #666;
+        }
+
+        
+
+        @media (max-width: 600px) {
+            #post-title {
+                font-size: 1.4rem;
+            }
+
+            #post-description {
+                font-size: 0.7rem;
+                max-width: 55vw;
+            }
+        }
+
+        @media (max-width: 768px) {
+            #post-title {
+                font-size: 1.6rem;
+            }
+
+            #post-description {
+                font-size: 1rem;
+                max-width: 70vw;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>საავტომობილო სიახლეების ბლოგი</h1>
+    </header>
+
+    <main>
+        <section id="blog-post">
+            <img id="post-image" src="" alt="Blog Image">
+            <span id="post-date"></span>
+            <h3 id="post-title"></h3>
+            <p id="post-description"></p>
+        </section>
+    </main>
+
+    <script>
+    let blogPosts = [];
+
+async function fetchBlogPosts() {
+    const response = await fetch('blog.json');
+    const data = await response.json();
+    blogPosts = data.blog; 
+}
+
+function getBlogIndexFromUrl() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const index = parseInt(urlParams.get('blog'), 10);
+    return isNaN(index) ? 0 : index; // Default to the first post if no valid index is provided
+}
+
+function loadBlogPost(index) {
+    if (index < 0 || index >= blogPosts.length) return;
+
+    const post = blogPosts[index];
+    document.getElementById('post-image').src = post.image;
+    document.getElementById('post-date').textContent = post.date; 
+    document.getElementById('post-title').textContent = post.title;
+    document.getElementById('post-description').textContent = post.description;
+}
+
+document.addEventListener('DOMContentLoaded', async () => {
+    await fetchBlogPosts();
+    const blogIndex = getBlogIndexFromUrl();
+    loadBlogPost(blogIndex);
+});
+    </script>
+</body>
+
+</html>
