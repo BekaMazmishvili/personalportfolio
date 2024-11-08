@@ -25,7 +25,7 @@ header {
   z-index: 1;
   margin-top: -9px;
   margin-left: -8px;
-  width:101vw;
+  width:102vw;
   box-sizing:border-box;
 }
 
@@ -125,7 +125,7 @@ height: 350px;
 }
 
 .about-me h2 {
-  width: 101vw;
+  width: 102vw;
   color: var(--color-white);
   font-size: 2em;
   text-align: center;
@@ -268,7 +268,7 @@ font-size:28px;
 color:var(--color-white);
 text-align: center;
 border-bottom: 3px solid var(--navbar-color);
-width:101vw;
+width:102vw;
 }
 .project-tile{
 position: relative;
@@ -311,7 +311,7 @@ color: var(--color-white);
 }
 .line{
   height: 3px;
-  width: 101vw;
+  width: 102vw;
   background-color: var(--navbar-color);
 }
 
