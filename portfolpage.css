@@ -125,7 +125,7 @@ height: 350px;
 }
 
 .about-me h2 {
-  width: 100vw;
+  width: 103vw;
   color: var(--color-white);
   font-size: 2em;
   text-align: center;
@@ -177,6 +177,7 @@ height: 350px;
   color: var(--color-white);
   margin-bottom: 30px;
   border-bottom: 3px solid var(--navbar-color);
+  width:103vw;
 }
 
 .skills-heading p {
@@ -266,6 +267,7 @@ font-size:28px;
 color:var(--color-white);
 text-align: center;
 border-bottom: 3px solid var(--navbar-color);
+width:103vw;
 }
 .project-tile{
 position: relative;
