@@ -170,7 +170,7 @@ height: 350px;
   text-align: center;
   padding: 60px 20px;
   box-sizing: border-box;
-  margin-left:-29px;
+  margin-left:-9px;
 }
 
 .skills-heading h2 {
@@ -179,6 +179,7 @@ height: 350px;
   margin-bottom: 30px;
   border-bottom: 3px solid var(--navbar-color);
   width:102vw;
+  margin-left:-20px;
 }
 
 .skills-heading p {
