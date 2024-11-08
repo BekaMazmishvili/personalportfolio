@@ -25,7 +25,7 @@ header {
   z-index: 1;
   margin-top: -9px;
   margin-left: -8px;
-  width:100vw;
+  width:101vw;
   box-sizing:border-box;
 }
 
@@ -125,7 +125,7 @@ height: 350px;
 }
 
 .about-me h2 {
-  width: 100vw;
+  width: 101vw;
   color: var(--color-white);
   font-size: 2em;
   text-align: center;
@@ -170,7 +170,7 @@ height: 350px;
   text-align: center;
   padding: 60px 20px;
   box-sizing: border-box;
-  margin-left:-30px;
+  margin-left:-29px;
 }
 
 .skills-heading h2 {
@@ -178,7 +178,7 @@ height: 350px;
   color: var(--color-white);
   margin-bottom: 30px;
   border-bottom: 3px solid var(--navbar-color);
-  width:100vw;
+  width:102vw;
 }
 
 .skills-heading p {
@@ -268,7 +268,7 @@ font-size:28px;
 color:var(--color-white);
 text-align: center;
 border-bottom: 3px solid var(--navbar-color);
-width:100vw;
+width:101vw;
 }
 .project-tile{
 position: relative;
@@ -311,7 +311,7 @@ color: var(--color-white);
 }
 .line{
   height: 3px;
-  width: 100vw;
+  width: 101vw;
   background-color: var(--navbar-color);
 }
 
