@@ -1,0 +1,272 @@
+:root {
+    --rose: #7a284e;
+    --light-rose: #fff7fb;
+    --stone-1: #312e2c;
+    --stone-2: #5f564d;
+    --stone-3: #e3ddd7;
+    --stone-4: #f3e5d7;
+    --brown: #854632;
+    --white: #ffffff;
+    --space-10: 128px;
+    --space-9: 48px;
+    --space-8: 40px;
+    --space-7: 32px;
+    --space-6: 28px;
+    --space-5: 24px;
+    --space-4: 20px;
+    --space-3: 16px;
+    --space-2: 12px;
+    --space-1: 8px;
+  }
+  .text-1 {
+    font-family: 'young serif';
+    font-size: var(--space-8);
+    line-height: 100%;
+    font-weight: normal;
+    letter-spacing: normal;
+  }
+  .text-2 {
+    font-family: 'young serif';
+    font-size: var(--space-6);
+    line-height: 100%;
+    font-weight: normal;
+    letter-spacing: normal;
+  }
+  .text-3 {
+    font-family: 'outfit';
+    font-size: var(--space-4);
+    line-height: 100%;
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+  .text-4 {
+    font-family: 'outfit';
+    font-size: var(--space-3);
+    line-height: 150%;
+    font-weight: 600;
+    letter-spacing: normal;
+  }
+  .text-4-bold {
+    font-family: 'outfit';
+    font-size: var(--space-3);
+    line-height: 150%;
+    font-weight: bold;
+    letter-spacing: normal;
+  }
+  @font-face {
+    font-family: 'YoungSerif';
+    src: url('/assets/fonts/YoungSerif-Regular.ttf');
+    font-family: 'Outfit';
+    src: url('assets/fonts/Outfit-VariableFont_wght.ttf');
+  }
+  
+  body {
+    background-color: var(--stone-4);
+    padding: var(--space-10) var(--space-9);
+  }
+  .card {
+    background-color: var(--white);
+    width: 736px;
+    height: 1700px;
+    padding: var(--space-8);
+    border-radius: var(--space-5);
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .card-img {
+    height: 300px;
+    width: 100%;
+    border-radius: var(--space-2);
+  }
+  .card-title {
+    height: 40px;
+    color: var(--stone-1);
+    margin: var(--space-8) 0 var(--space-5) 0;
+  }
+  .card-paragraph {
+    color: var(--stone-2);
+    margin: 0;
+    height: 48px;
+    margin-bottom: var(--space-7);
+  }
+  .prepar-div {
+    height: 172px;
+    padding: var(--space-5);
+    background-color: var(--light-rose);
+    box-sizing: border-box;
+    border-radius: var(--space-2);
+    margin-bottom: var(--space-7);
+  }
+  .prepar-heading {
+    color: var(--rose);
+    margin: 0;
+    padding-bottom: var(--space-3);
+  }
+  .prep-ul {
+    margin: 0;
+    padding-left: var(--space-5);
+  }
+  .prep-text {
+    color: var(--stone-2);
+  }
+  .prep-bold {
+    color: var(--stone-1);
+    padding-left: var(--space-3);
+  }
+  ul.prep-ul li {
+    padding-right: var(--space-1);
+  }
+  .prep-ul li {
+    color: var(--rose);
+    height: var(--space-5);
+    margin-bottom: var(--space-1);
+  }
+  .ingredients-sect {
+    height: 204px;
+    box-sizing: border-box;
+    margin-bottom: 31px;
+  }
+  .ingr-heading {
+    height: 28px;
+    color: #854632;
+    margin: 0 0 var(--space-5) 0;
+  }
+  .ingr-ul {
+    margin: 0;
+    padding-left: var(--space-5);
+  }
+  .ingr-span {
+    display: block;
+    padding-left: var(--space-3);
+    color: var(--stone-2);
+  }
+  ul.ingr-ul li {
+    padding-right: var(--space-8);
+  }
+  .ingr-ul li {
+    height: var(--space-5);
+    color: var(--brown);
+    margin-bottom: var(--space-1);
+  }
+  .line {
+    height: 1px;
+    background-color: var(--stone-3);
+  }
+  .instruction-sect {
+    height: 332px;
+    box-sizing: border-box;
+    margin-bottom: 31px;
+  }
+  .instr-heading {
+    color: var(--brown);
+    box-sizing: border-box;
+    margin: var(--space-7) 0 var(--space-5) 0;
+  }
+  .instr-span {
+    display: block;
+    padding-left: var(--space-3);
+    color: var(--stone-2);
+  }
+  .instr-bold {
+    color: var(--stone-1);
+  }
+  .instr-ol {
+    margin: 0;
+    padding-left: var(--space-4);
+  }
+  .instr-ol li {
+    color: var(--brown);
+    margin-bottom: var(--space-1);
+  }
+  .nutrion-sect {
+    height: 268px;
+  }
+  .nutr-heading {
+    margin: var(--space-7) 0 var(--space-5) 0;
+    color: var(--brown);
+  }
+  .nutr-text {
+    margin: 0 0 var(--space-5) 0;
+    color: var(--stone-2);
+  }
+  .nutr-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    width: 100%;
+  }
+  .nutr-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 6px 32px;
+    box-sizing: border-box;
+  }
+  
+  .normal-nutr {
+    color: var(--stone-2);
+    width: 288px;
+  }
+  
+  .bold-nutr {
+    color: var(--brown);
+    text-align: left;
+    width: 288px;
+  }
+  @media (max-width: 768px) {
+    body {
+      padding: 0;
+      margin: 10px 0;
+    }
+    .card {
+      width: 616px;
+      height: 1844px;
+    }
+    .card-paragraph {
+      height: 72px;
+    }
+    .instruction-sect {
+      height: 428px;
+    }
+    .nutrion-sect {
+      height: 292px;
+    }
+  }
+  @media (max-width: 617px) {
+    body {
+      padding: 0;
+      margin: 10px 0;
+    }
+    .card {
+      width: 375px;
+      height: 2043px;
+      border-radius: 0px;
+      padding: 0 var(--space-7) var(--space-8) var(--space-7);
+    }
+    .card-img {
+      position: relative;
+      height: 171px;
+      width: 375px;
+      border-radius: 0px;
+      right: 32px;
+    }
+    .card-title {
+      height: 72px;
+    }
+    .card-paragraph {
+      height: 120px;
+    }
+    .prepar-div {
+      height: 196px;
+    }
+    .prep-ul {
+      display: inline;
+    }
+    .ingredients-sect {
+      height: 228px;
+    }
+    .instruction-sect {
+      height: 668px;
+    }
+  }
+  
