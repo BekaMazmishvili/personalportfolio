@@ -25,6 +25,8 @@ header {
   z-index: 1;
   margin-top: -9px;
   margin-left: -8px;
+  width:100vw;
+  box-sizing:border-box;
 }
 
 /* Navbar Layout */
@@ -168,7 +170,7 @@ height: 350px;
   text-align: center;
   padding: 60px 20px;
   box-sizing: border-box;
-  margin-left:-8px;
+  margin-left:-18px;
 }
 
 .skills-heading h2 {
@@ -177,7 +179,6 @@ height: 350px;
   margin-bottom: 30px;
   border-bottom: 3px solid var(--navbar-color);
   width:100vw;
-  margin-left:-8px;
 }
 
 .skills-heading p {
