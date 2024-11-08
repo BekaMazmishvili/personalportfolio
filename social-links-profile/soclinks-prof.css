@@ -1,0 +1,103 @@
+:root {
+    --green: #c4f82a;
+    --black: #141414;
+    --gray: #1f1f1f;
+    --light-gray: #333333;
+    --white: #ffffff;
+    --space-6: 24px;
+    --space-5: 16px;
+    --space-4: 14px;
+    --space-3: 12px;
+    --space-2: 8px;
+    --space-1: 4px;
+  }
+  .text {
+    font-family: 'inter';
+    line-height: 150%;
+    letter-spacing: 0px;
+  }
+  .text-1 {
+    font-size: var(--space-6);
+    font-weight: 600;
+  }
+  .text-2 {
+    font-size: var(--space-4);
+    font-weight: normal;
+  }
+  .text-2-bold {
+    font-size: var(--space-4);
+    font-weight: bold;
+  }
+  @font-face {
+    font-family: 'inter';
+    src: url('/assets/fonts/Inter-VariableFont_slnt,wght.ttf');
+  }
+  body {
+    background-color: var(--black);
+  }
+  .soc-card {
+    margin: 20px auto;
+    background-color: var(--gray);
+    width: 327px;
+    height: 579px;
+    box-sizing: border-box;
+    padding: var(--space-6);
+    border-radius: var(--space-3);
+  }
+  .avatar-img {
+    width: 88px;
+    height: 88px;
+    border-radius: 999px;
+    display: block;
+    margin: 0 auto;
+  }
+  .name-address {
+    height: 61px;
+    padding: var(--space-6) 0;
+  }
+  .name {
+    margin: 0;
+    color: var(--white);
+    font-size: var(--space-6);
+    height: 36px;
+    text-align: center;
+    letter-spacing: normal;
+  }
+  .address {
+    display: block;
+    font-size: var(--space-4);
+    color: var(--green);
+    height: 21px;
+    letter-spacing: normal;
+    text-align: center;
+  }
+  .profession {
+    color: var(--white);
+    font-size: var(--space-4);
+    display: block;
+    height: 21px;
+    letter-spacing: normal;
+    text-align: center;
+    margin-bottom: var(--space-6);
+  }
+  .skills {
+    display: block;
+    margin-bottom: var(--space-5);
+    background-color: var(--light-gray);
+    text-align: center;
+    height: 45px;
+    border-radius: var(--space-2);
+    overflow: hidden;
+  }
+  .skills a {
+    display: block;
+    padding: var(--space-3);
+    text-decoration: none;
+    color: var(--white);
+    background-color: var(--light-gray);
+  }
+  .skills a:hover {
+    color: var(--light-gray);
+    background-color: var(--white);
+  }
+  

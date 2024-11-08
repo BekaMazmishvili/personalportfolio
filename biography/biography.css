@@ -1,0 +1,43 @@
+body{
+    font-family: Verdana, sans-serif;
+    color:#2d2c2c;
+}
+#main{
+    background-color: rgb(200, 190, 190);
+}
+
+#title{
+    text-align: center;
+    font-size: 40px;
+}
+#coment{
+    text-align: center;
+}
+#img-div{
+    width: 90%;
+    background-color: white;
+    margin:0 auto;
+}
+#image{
+    max-width:100%;
+    display:block;
+    margin:0 auto;
+  }
+  #img-caption{
+    text-align: center;
+  }
+  #lists{
+    max-width:600px;
+    min-width: 250px;
+    margin: 0 auto;
+   
+  }
+  li{
+    margin-bottom: 1em;
+  }
+  #time-line,#link-text{
+    text-align: center;
+  }
+  section a:hover{
+    color: rgb(25, 103, 60);
+  }

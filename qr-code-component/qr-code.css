@@ -1,0 +1,62 @@
+:root {
+    --color-slate-1: #1f314f;
+    --color-slate-2: #68778d;
+    --color-slate-3: #d5e1ef;
+    --color-white: #ffffff;
+    --space-3: 40px;
+    --space-2: 24px;
+    --space-1: 16px;
+  }
+  .text-1 {
+    font-family: 'Outfit';
+    font-size: 22px;
+    line-height: 120%;
+    font-weight: bold;
+    letter-spacing: 0px;
+  }
+  .text-2 {
+    font-family: 'Outfit';
+    font-size: 15px;
+    line-height: 140%;
+    font-weight: normal;
+    letter-spacing: 0.2px;
+  }
+  @font-face {
+    font-family: 'Outfit';
+    src: url('/assets/outfit/Outfit-VariableFont_wght.ttf');
+  }
+  body {
+    background-color: var(--color-slate-3);
+  }
+  .card {
+    width: 320px;
+    height: 499px;
+    padding: var(--space-1) var(--space-1) var(--space-3) var(--space-1);
+    background-color: var(--color-white);
+    border-radius: 20px;
+    box-sizing: border-box;
+    margin: 20px auto;
+  }
+  .card-img {
+    width: 288px;
+    height: 288px;
+    margin-bottom: var(--space-2);
+    border-radius: 10px;
+  }
+  .text {
+    padding: 0 var(--space-1);
+    width: 288px;
+    height: 131px;
+    box-sizing: border-box;
+    text-align: center;
+  }
+  .title {
+    margin-bottom: var(--space-1);
+    margin: 0 0 var(--space-2) 0;
+    color: var(--color-slate-1);
+  }
+  .parag-text {
+    margin: 0;
+    color: var(--color-slate-2);
+  }
+  

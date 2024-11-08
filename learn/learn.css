@@ -1,0 +1,121 @@
+*{
+    scroll-behavior:smooth;
+  }
+  @media screen and (max-width:670px){
+    body{
+      font-size:12px;
+    }
+    #navbar{
+    background-color: #1f2505;
+    text-align: center;
+    max-height: 150px;
+    min-width:100vw;
+    border-bottom: 20px solid #1f2505;
+    z-index: 1;
+    margin-top:-7px;
+}
+    .nav-link{
+    min-width:103vw;
+    font-size:15px;
+}
+#navbar ul li{
+    min-width:103vw;
+}
+#main-doc{
+    max-width:95vw;
+}
+#main-doc header{
+  padding-top:175px;
+}
+    article{
+      font-size:13px;
+    }
+   }
+   @media screen and (min-width:671px){
+    #main-doc{
+        margin-left: 280px;
+    }
+    #main-doc header{
+  padding-top:55px;
+}
+    #navbar{
+      background-color:#1f2505;
+        border-right: 3px solid rgb(13, 238, 84);
+    }
+   }
+body{
+    font-family: Tahoma, sans-serif;
+    background-color: rgb(36, 34, 34);
+     color: white;
+     overflow-x: hidden;
+}
+#navbar{
+    display: block;
+    position: fixed;
+    width: 270px;
+    height: 100%;
+    top: 0;
+    left:1px;
+}
+header{
+    font-size: 25px;
+}
+nav header{
+    font-size: 25px;
+    position: relative;
+    top:10px;
+    margin-left: 25px;
+}
+
+#navbar ul{
+    display: flex;
+    flex-direction: column;
+  align-items: left;
+  padding-inline-start: 0;
+  gap:1.5em;
+  font-size: 16px;
+  height: 83%;
+  overflow-y: auto;
+  overflow-x: hidden;
+ 
+}
+#navbar ul li{
+    width: 280px;
+    border-top: 2px solid rgb(13, 238, 84);;
+    margin-left:-10px;
+}
+.nav-link{
+    width:250px;
+    text-decoration:none ;
+    color: white;;
+    position: relative;
+    top:13px;
+    margin-left: 25px;
+}
+.nav-link:hover{
+    color:rgb(13, 238, 84);
+}
+#main-doc{
+    position: relative;
+    display: block;
+    width: calc(100%-250px); 
+   padding:10px;
+}
+code{
+    display: block;
+    max-width: 40vw;
+    min-width: 270px;
+    padding: 15px;
+    margin: 10px;
+    margin-left:-5px;
+    border-radius: 5px;
+    line-height: 3;
+    background-color: black;
+    color: rgb(13, 238, 84);
+}
+#mdn-link{
+    color:rgb(155, 155, 155) ;
+}
+#mdn-link:hover{
+color:rgb(13, 238, 84); 
+}

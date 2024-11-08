@@ -1,0 +1,87 @@
+body {
+    width: 100%;
+    height: 100vh;
+    margin: 0 auto;
+    color: #f5f6f7;
+    font-family: Cambria, Cochin, serif;
+    font-size: larger;
+    background-image: url(https://cdn.freecodecamp.org/testable-projects-fcc/images/survey-form-background.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  h1, p {
+    margin: 1em auto;
+    text-align: center;
+  }
+  #title, #description{
+  color: #9b9a9a;
+  }
+  form {
+    width: 60vw;
+    max-width: 550px;
+    min-width: 250px;
+    margin: 0 auto;
+    background-color: #262121;
+    opacity: 0.85;
+    border-radius: 1em;
+  }
+  fieldset {
+    border: none;
+    padding: 2rem 0;
+  }
+  
+  input, textarea {
+    background-color: #262121;
+    border: 1px solid #262121;
+    color: #000000;
+  }
+  #submit{
+  display: block;
+    max-width: 40%;
+    margin: 1em auto;
+    height: 2em;
+    font-size: 1.1rem;
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    padding: 10px;
+    text-shadow: 0px -1px 0px rgba(30, 30, 30, 0.8);
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+    background: rgb(0, 220, 0);
+    background: -moz-linear-gradient(90deg, rgb(0, 220, 0) 26%, rgb(0, 156, 0) 73%);
+    background: -webkit-linear-gradient(90deg, rgb(0, 220, 0) 26%, rgb(0, 156, 0) 73%);
+    background: -o-linear-gradient(90deg, rgb(0, 220, 0) 26%, rgb(0, 156, 0) 73%);
+    background: -ms-linear-gradient(90deg, rgb(0, 220, 0) 26%, rgb(0, 156, 0) 73%);
+    background: linear-gradient(0deg, rgb(0, 220, 0) 26%, rgb(0, 156, 0) 73%);
+    -webkit-box-shadow: 6px 0px 15px rgba(7, 99, 50, 1);
+    -moz-box-shadow:    6px 0px 15px rgba(7, 99, 50, 1);
+    box-shadow:         6px 0px 15px rgba(7, 99, 50, 1);
+  }
+  label {
+    display: block;
+    margin: 0.5rem 0;
+   
+  }
+  
+  input,
+  textarea,
+  select {
+    margin: 10px 0px 0px 0px;
+    width:100%;
+    min-height: 1em;
+  }
+  #radio, #checkbox{
+    width:15%;
+  }
+  #name, #email, #number, #dropdown, #textarea{
+  border-radius: 0.5em;
+  background-color:rgb(206, 181, 137);
+  min-height:2rem ;
+  }
+  span{
+    height:2rem;
+    font-size: 18px;
+  }
+  

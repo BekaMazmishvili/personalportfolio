@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental</title>
+    <!--Link To Css-->
+    <link rel="stylesheet" href="index.css">
+
+    <!-- Box Icons -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <!--Navbar-->
+    <header>
+        <!--Nav Container-->
+        <div class="nav container">
+            <!--Menu Icon-->
+            <i class='bx bx-menu' id="menu-icon"></i>
+            <!--Logo-->
+            <a href="#" class="logo">Car<span>Rental</span></a>
+            <!--Navbar List-->
+            <ul class="navbar">
+                <li> <a href="#home">მთავარი</a></li>
+                <li> <a href="#cars">კატეგორიები</a></li>
+                <li> <a href="#parts">ავტომობილები</a></li>
+                <li> <a href="#blog">ბლოგი</a></li>
+                <li> <a href="about.html">ჩვენს შესახებ</a></li>
+                <li> <a href="contact.html">კონტაქტი</a></li>            
+            </ul>
+            <!--search Icon-->
+            <i class='bx bx-search' id="search-icon"></i>
+            <!--search Box-->
+            <div class="search-box container">
+                <input type="search" name="" id="search" placeholder="მოძებნეთ მანქანა...">
+            </div>
+        </div>
+    </header>
+    
+    <!--Home section-->
+    <section class="home" id="home">
+        <div class="home-text">
+            <h1>ჩვენ გვყავს ყველა ტიპის <br> <span>ავტომობილი</span> რაც შეიძლება <br> დაგჭირდეთ</h1>
+            <br>
+            <br>
+            <!--home Button-->
+            <a href="#cars" class="btn">შეარჩიეთ ახლავე</a>
+            <br>
+        <br>
+        </div>
+        
+    </section>
+
+    <!--cars section-->
+    <section class="cars" id="cars">
+        <div class="heading">
+            <br>
+            <span>ავტომობილები</span>
+            <h2>ჩვენ გვყავს ყველა ტიპის ავტომობილი</h2>
+            <p>ამოირჩიეთ თქვენთვის სასურველი კატეგორიის <br>ავტომობილი და განაგრძეთ ძიება.</p>
+        </div>
+        <!--Cars container-->
+        <div class="cars-container container">
+            <!--Box 1-->
+            <div class="box">
+                <img src="./img/sedan.jpg" alt="" >
+                <a href="#sedan"> <h2>სედანი</h2> </a>
+            </div>
+            <!--Box 2-->
+            <div class="box">
+                <img src="./img/jeep.jpg" alt="">
+                <a href="#jipi"><h2>ჯიპი</h2> </a>
+            </div>
+
+            <!--Box 3-->
+        <div class="box">
+            <img src="./img/gtrfront.jpg" alt="">
+           <a href="#sport"> <h2>სპორტული</h2> </a>
+        </div>
+
+            <!--Box 4-->
+            <div class="box">
+                <img src="./img/minivan.jpg" alt="">
+                <a href="#miniveni"> <h2>მინივენი</h2> </a>
+            </div>
+
+            <!--Box 5-->
+            <div class="box">
+                <img src="./img/eco.jpg" alt="">
+                <a href="#ekonom"><h2>ეკონომ-კლასი</h2></a>
+            </div>
+
+            <!--Box 6-->
+            <div class="box">
+                <img src="./img/exclusive.jpg" alt="">
+                <a href="#exclusive"><h2>ექსკლუზიური მანქანები</h2></a>,
+            </div>
+        </div>
+
+    </section>
+
+    <!--carss section-->
+    <section class="parts" id="parts">
+        <div class="heading">
+            <span>რას გთავაზობთ?</span>
+            <h2>ყოველთვის გაგაოცებთ ხელმისაწვდომი და სანდო სერვისით</h2>
+            <p>ჩვენი ავტომობილებით, თქვენი მოგზაურობა ხდება კომფორტული და უსაფრთხო. </p>
+        </div>
+
+        <!--cars container-->
+        <div class="parts-container container">
+
+<div class="paymentForm">          
+<form action="card.php" method="post">
+    <div class="payment">
+        <h6 class="payTitle">პერსონალური ინფორმაცია</h6>
+        <label>სახელი და გვარი</label>
+        <input type="text" placeholder="სახელი გვარი" name="name" class="payInput">
+        <label>ტელეფონის ნომერი</label>
+        <input type="text" placeholder="+995-5xx-xx-xx-xx" name="number" class="payInput">
+        <h6 class="payTitle">დაქირავების ხანგრძლივობა</h6>
+        <div>
+        <input type="date" class="payInput" name="start"   value="2025-01-22" min="2025-01-01" max="2026-12-31" /> <span>დან</span>
+        <input type="date" class="payInput" name="end"  value="2025-01-22" min="2025-01-01" max="2026-12-31" />  <span>მდე</span>
+        </div>
+        <h6 class="payTitle">ბარათის ინფორმაცია</h6>
+        <input type="text" class="payInput" name="cardnumber" placeholder="ბარათის ნომერი">
+        <div class="cardInfo">
+            <input type="text" placeholder="mm"  name="cardmonth" class="payInput sm">
+            <input type="text" placeholder="yyyy" name="cardyear" class="payInput sm">
+            <input type="text" placeholder="cvv" name="cardcvv" class="payInput sm">
+        </div>
+        <button class="payButton">შეამოწმეთ და გაგზავნეთ!</button>
+        <span class="close">X</span>
+    </div>
+</form>
+</div> 
+            <!--Box 1-->
+            <div class="box car-box" id="sedan">
+            <img src="./img/q50front.jpg" alt="">
+                <h3>Infinity Q50 2023</h3>
+                <span>$18.90/დღეში ან $397.90/თვეში </span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>10.7ლ/100კმ</i>
+                <a class="productButton" data-index="0"  >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=0'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 2-->
+
+            <div class="box car-box">
+                <img src="./img/mercfront.jpg" alt="">
+                <h3>Mercedes Benz E-class 2022</h3>
+                <span>$17.99/დღეში ან $389.99/თვეში </span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>8.3ლ/100კმ</i>
+                <a  class="productButton" data-index="1" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=1'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 3-->
+
+            <div class="box car-box">
+                <img src="./img/fusfront.jpg" alt="">
+                <h3>Ford fusion 2021</h3>
+                <span>$9.99/დღეში ან $189.99/თვეში </span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>7.9ლ/100კმ</i>
+                <a  class="productButton" data-index="2" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=2'" class="details">დეტალურად</a>
+            </div>
+            
+            <!--Box 4-->
+
+            <div class="box car-box " id="jipi">
+                <img src="./img/wrangfront.jpg" alt="">
+                <h3>Jeep Wrangler 2022</h3>
+                <span>$16.99/დღეში ან $279.99/თვეში</span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>12.5ლ/100კმ</i>
+                <a  class="productButton" data-index="3"  >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=3'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 5-->
+
+            <div class="box car-box">
+            <img src="./img/subfront.jpg" alt="">
+            <h3> Subaru Forester 2023</h3>
+                <span>$12.99/დღეში ან $209.99/თვეში</span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>8.4ლ/100კმ</i>
+                <a  class="productButton" data-index="4" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=4'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 6-->
+            <div class="box car-box">
+                <img src="./img/x5front.jpg" alt="">
+                <h3> BMW X5 2020</h3>
+                <span> $20.09/დღეში ან $339.90/თვეში</span>
+                <i class='bx bxs-star'>დიზელი</i>
+                <i class='bx bxs-star'>7.4ლ/100კმ</i>
+                <a  class="productButton" data-index="5" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=5'" class="details">დეტალურად</a>
+            </div>
+            
+            <!--Box 7-->
+
+            <div class="box car-box" id="sport">
+                <img src="./img/gtrfront.jpg" alt="">
+                <h3>Nissan GTR NISMO 2021</h3>
+                <span>$27.99/დღეში ან $589.99/თვეში</span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>13.8ლ/100კმ</i>
+                <a class="productButton" data-index="6" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=6'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 8-->
+
+            <div class="box car-box">
+                <img src="./img/porfront.jpg" alt="">
+                <h3>Porsche 911 GR3RS 2023</h3>
+                <span>$29.99/დღეში ან $599.99/თვეში</span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>13.5ლ/100კმ</i>
+                <a class="productButton" data-index="7" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=7'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 9-->
+
+            <div class="box car-box">
+            <img src="./img/srtfront.jpg" alt="">
+                <h3>Dodge challenger SRT Hellcat 2020</h3>
+                <span>$21.99/დღეში ან $479.99/თვეში</span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>14.8ლ/100კმ</i>
+                <a class="productButton" data-index="8" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=8'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 10-->
+
+            <div class="box car-box" id="miniveni">
+                <img src="./img/lexfront.jpg" alt="">
+                <h3>Lexus LM 500h 2024</h3>
+                <span> $14.99/დღეში ან $279.99/თვეში</span>
+                <i class='bx bxs-star'>ჰიბრიდი</i>
+                <i class='bx bxs-star'>7.2ლ/100კმ</i>
+                <a class="productButton" data-index="9" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=9'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 11-->
+    
+            <div class="box car-box">
+                <img src="./img/turfront.jpg" alt="">
+                <h3>Ford Tourneo 2023</h3>
+                <span>  $10.99/დღეში ან $209.99/თვეში</span>
+                <i class='bx bxs-star'>დიზელი</i>
+                <i class='bx bxs-star'>6,5ლ/100კმ</i>
+                <a class="productButton" data-index="10" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=10'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 12-->
+
+            <div class="box car-box">
+                <img src="./img/vitofront.jpg" alt="">
+                <h3>Mercedes-Benz vito 2022</h3>
+                <span> $12.99/დღეში ან $249.99/თვეში</span>
+                <i class='bx bxs-star'>დიზელი</i>
+                <i class='bx bxs-star'>5,8ლ/100კმ</i>
+                <a class="productButton" data-index="11" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=11'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 13-->
+
+            <div class="box car-box" id="ekonom">
+                <img src="./img/teslfront.jpg" alt="">
+                <h3>Tesla Model s 2020</h3>
+                <span>$13.99/დღეში ან $349.99/თვეში </span>
+                <i class='bx bxs-star'>ელექტრო</i>
+                <i class='bx bxs-star'>მანძილი 647km</i>
+                <a class="productButton" data-index="12" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=12'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 14-->
+
+            <div class="box car-box">
+            <img src="./img/camrfront.jpg" alt="">
+                <h3>Toyota camry 2021</h3>
+                <span>$10.99/დღეში ან $249.99/თვეში </span>
+                <i class='bx bxs-star'>ჰიბრიდი</i>
+                <i class='bx bxs-star'>5.2ლ/100კმ</i>
+                <a class="productButton" data-index="13" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=13'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 15-->
+
+            <div class="box car-box">
+            <img src="./img/priuscfront.jpg" alt="">
+            <h3>Toyota Prius C 2019</h3>
+                <span>$5.99/დღეში ან $149.99/თვეში </span>
+                <i class='bx bxs-star'>ჰიბრიდი</i>
+                <i class='bx bxs-star'>2.9ლ/100კმ</i>
+                <a class="productButton" data-index="14" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=14'" class="details">დეტალურად</a>
+            </div>
+            
+            <!--Box 16-->
+
+            <div class="box car-box" id="exclusive">
+                <img src="./img/roisfront.jpg" alt="">
+                <h3>Rolls Roice Phantom 2021</h3>
+                <span>$38.90/დღეში ან $849.90/თვეში</span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>16,8ლ/100კმ</i>
+                <a class="productButton" data-index="15" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=15'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 17-->
+
+            <div class="box car-box">
+                <img src="./img/sfront.jpg" alt="">
+                <h3>Mercedes-Benz MAYBACH S 650 2020</h3>
+                <span>$44.90/დღეში ან $899.90/თვეში</span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>17,4ლ/100კმ</i>
+                <a class="productButton" data-index="16" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=16'" class="details">დეტალურად</a>
+            </div>
+
+            <!--Box 18-->
+
+            <div class="box car-box">
+                <img src="./img/escfront.jpg" alt="">
+                <h3>Cadillac Escalade 2022</h3>
+                <span>$32.99/დღეში ან $769.99/თვეში</span>
+                <i class='bx bxs-star'>ბენზინი</i>
+                <i class='bx bxs-star'>14,8ლ/100კმ</i>
+                <a class="productButton" data-index="17" >დაქირავება</a>
+                <a onclick="location.href='car-specs.html?car=17'" class="details">დეტალურად</a>
+            </div>
+
+        </div>
+    </section>
+    <!--Blog Container-->
+    
+    <section class="blog-section" id="blog">
+        <div class="heading">
+            <span>ბლოგი & სიახლეები</span>
+            <h2>ჩვენი ბლოგის კონტენტი</h2>
+            <p>ავტომობილების სამყაროში ინოვაციების, რჩევებისა და ექსპერტული მიმოხილვების ადგილი.
+                ჩვენ გიზიარებთ უახლეს ტენდენციებს, ავტომობილის მოვლის ხრიკებსა და ტექნოლოგიურ სიახლეებს.</p>
+        </div>
+        <div class="slider-container">
+            <button class="prev" onclick="prevSlide()">&#10094;</button>
+            <div class="blog-slider">
+                <div class="blog-wrapper">
+                    <!-- Repeated boxes -->
+                    <div class="boxx">
+                        <img src="./img/car1.jpg" alt="">
+                        <span>21 დეკემბერი 2024</span>
+                        <h3>როგორ ვიპოვოთ იდეალური მანქანა საუკეთესო ფასად</h3>
+                        <p>იდეალური მანქანის პოვნა საუკეთესო ფასად მოითხოვს გააზრებულ მიდგომას და სხვადასხვა...</p>
+                        <a href="blog.html?blog=0" class="blog-btn">იხილეთ მეტი<i class='bx bx-right-arrow-alt'></i> </a>
+                        
+                    
+                    </div>
+
+                    <div class="boxx">
+                        <img src="./img/prius.jpg" alt="">
+                        <span>16 ნოემბერი 2024</span>
+                        <h3>ყველაზე ეკონომიური ავტომობილები ბაზარზე</h3>
+                        <p>მანქანის პოვნა, რომელიც გთავაზობთ საწვავის შესანიშნავ ეფექტურობას მუშაობის ან...</p>
+                        <a href="blog.html?blog=1" class="blog-btn">იხილეთ მეტი<i class='bx bx-right-arrow-alt'></i> </a>
+                    </div>
+
+                    <div class="boxx">
+                        <img src="./img/koenig.jpg" alt="">
+                        <span>7 ოქტომბერი 2024</span>
+                        <h3>ახალი რეკორდი სახმელეთო სიჩქარის განვითარებაზე</h3>
+                        <p>Koenigsegg Jesko Absolut-მა ახალი რეკორდი დაამყარა მიწის სიჩქარის...</p>
+                        <a href="blog.html?blog=2" class="blog-btn">იხილეთ მეტი<i class='bx bx-right-arrow-alt'></i> </a>
+                    </div>
+
+                    <div class="boxx">
+                        <img src="./img/zamt.jpg" alt="">
+                        <span>5 სექტემბერი 2024</span>
+                        <h3>როგორ შევარჩიოთ ზამთრის რეზინი</h3>
+                        <p>სწორი ზამთრის საბურავების არჩევა გადამწყვეტია თქვენი მანქანის უსაფრთხოებისა და...</p>
+                        <a href="blog.html?blog=3" class="blog-btn">იხილეთ მეტი<i class='bx bx-right-arrow-alt'></i> </a>
+                    </div>
+
+                    <div class="boxx">
+                        <img src="./img/serv.jpg" alt="">
+                        <span>12 აგვისტო 2024</span>
+                        <h3>როგორ გავაკეთოთ სწორი სერვისი ავტომობილზე</h3>
+                        <p>მანქანის რეგულარული სერვისი აუცილებელია თქვენი მანქანის მუშაობის, უსაფრთხოებისა და...</p>
+                        <a href="blog.html?blog=4" class="blog-btn">იხილეთ მეტი<i class='bx bx-right-arrow-alt'></i> </a>
+                    </div>
+
+                    <div class="boxx">
+                        <img src="./img/ecodr.jpeg" alt="">
+                        <span>27 ივლისი 2024</span>
+                        <h3>როგორ ვმართოთ ავტომობილი ეკონომიურად</h3>
+                        <p>მანქანის ეკონომიურად მართვა არა მხოლოდ გეხმარებათ ფულის დაზოგვაში საწვავზე...</p>
+                        <a href="blog.html?blog=5" class="blog-btn">იხილეთ მეტი<i class='bx bx-right-arrow-alt'></i> </a>
+                    </div>
+                    <div class="boxx">
+                        <img src="./img/milrec.jpeg" alt="">
+                        <span>30 ივნისი 2024</span>
+                        <h3>მსოფლიო რეკორდი ყველაზე მეტი გარბენი ავტომობილების ისტორიაში</h3>
+                        <p>IRV Gordon-ის Volvo P1800 ცნობილია თავისი გასაოცარი ხანგრძლივობით,...</p>
+                        <a href="blog.html?blog=6" class="blog-btn">იხილეთ მეტი<i class='bx bx-right-arrow-alt'></i> </a>
+                    </div>
+                </div>
+            </div>
+            <button class="next" onclick="nextSlide()">&#10095;</button>
+        </div>
+    </section>
+
+    <!--footer-->
+    <section class="footer">
+        <div class="footer-container container">
+            <div class="footer-box">
+                <a href="#" class="logo">Car<span>Rental</span></a>
+                <div class="social">
+                    <a href="https://www.facebook.com/"><i class='bx bxl-facebook'></i></a>
+                    <a href="https://www.twitter.com/"><i class='bx bxl-twitter'></i></a>
+                    <a href="https://www.instagram.com/"><i class='bx bxl-instagram'></i></a>
+                    <a href="https://www.youtube.com/"><i class='bx bxl-youtube'></i></a>
+                </div>
+            </div>
+            <div class="footer-box">
+                <h3>გვერდის განყოფილებები</h3>
+                <a href="#">მთავარი</a>
+                <a href="#cars">კატეგორიები</a>
+                <a href="#parts">ავტომობილები</a>
+                <a href="#blog">ბლოგი</a>
+            </div>
+
+        </div>
+    </section>
+ 
+    <!--Copyright-->
+    <div class="copyright">
+        <p>&#169; Beka Mazmishvili</p>
+    </div>
+
+    <!--Link To JS-->
+    <script src="./main.js"></script>
+
+</body>
+</html>
