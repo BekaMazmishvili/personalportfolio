@@ -19,7 +19,6 @@ font-family:tahoma, sans-serif;
   background-color: var(--background-color) ;
 }
 header {
-  box-sizing: border-box;
   position: fixed;
   width: 100vw;
   height: 70px;
@@ -38,7 +37,6 @@ header {
   font-family: impact, sans-serif;
   box-sizing: border-box;
   height: 70px;
-  width:103vw;
 }
 
 /* Title Styling */
@@ -126,7 +124,7 @@ height: 350px;
 }
 
 .about-me h2 {
-  width: 103vw;
+  width: 100vw;
   color: var(--color-white);
   font-size: 2em;
   text-align: center;
@@ -178,7 +176,7 @@ height: 350px;
   color: var(--color-white);
   margin-bottom: 30px;
   border-bottom: 3px solid var(--navbar-color);
-  width:103vw;
+  width:100vw;
 }
 
 .skills-heading p {
@@ -268,7 +266,7 @@ font-size:28px;
 color:var(--color-white);
 text-align: center;
 border-bottom: 3px solid var(--navbar-color);
-width:103vw;
+width:100vw;
 }
 .project-tile{
 position: relative;
@@ -311,7 +309,7 @@ color: var(--color-white);
 }
 .line{
   height: 3px;
-  width: 103vw;
+  width: 100vw;
   background-color: var(--navbar-color);
 }
 
