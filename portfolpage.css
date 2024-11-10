@@ -1,4 +1,4 @@
-* {
+3* {
   scroll-behavior: smooth;
 }
 :root{
@@ -482,7 +482,7 @@ margin-left:-45px
     width: 100%;
     flex-direction: column;
     text-align: center;
-    left:75px;
+    left:37.5px;
   }
 
   .navbar ul.active {
