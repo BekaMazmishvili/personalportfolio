@@ -479,9 +479,10 @@ margin-left:-45px
     top: 70px;
     right: 0;
     background-color: var(--navbar-color);
-    width: 100%;
+    width: 100vw;
     flex-direction: column;
     text-align: center;
+    left:75px;
   }
 
   .navbar ul.active {
