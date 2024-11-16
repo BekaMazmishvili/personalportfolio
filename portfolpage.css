@@ -381,6 +381,9 @@ html {
 .port-title{
 top:-7px;
 }
+.navbar ul{
+ font-size:1.2rem;
+}
 .about-me{
   height: 1100px;
 }
@@ -433,9 +436,6 @@ font-size:16px;
   }
   html {
     font-size: 80%;
-  }
-  .port-title{
-    margin-top:-3px;
   }
   img{
     max-width:250px;
